@@ -1,12 +1,15 @@
 <?php
-    require "Calculadora.php";
+$saldos = [
+    2500,
+    2400,
+    3000,
+    5000,
+    1000,
+];
 
-$notas = [2, 3, 4, 5, 6];
+echo '<pre>';
+var_dump($saldos);
 
-$calculadora = new Calculadora;
-$media = $calculadora->calcularMedia($notas);
-if ($media == null) {
-    echo "não foi possivel concluir o calculo de media!";
-} else {
-    echo "A media é {$media}";
-}
+sort($saldos);
+
+var_dump($saldos);
