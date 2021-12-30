@@ -1,15 +1,12 @@
 <?php
-$saldos = [
-    2500,
-    2400,
-    3000,
-    5000,
-    1000,
-];
+$nomes = 'Gabriel, Carlos, João, Raymundo';
 
-echo '<pre>';
-var_dump($saldos);
+$nomes_array = explode(', ', $nomes);
 
-sort($saldos);
+foreach ($nomes_array as $value) {
+    echo "Olá {$value} <br>";
+}
 
-var_dump($saldos);
+$nomes_juntos = implode(', ', $nomes_array);
+
+echo "<h1>{$nomes_juntos}</h1";
