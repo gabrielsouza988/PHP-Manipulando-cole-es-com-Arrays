@@ -4,19 +4,25 @@ require "autoload.php";
 
 use Alura\ArrayUtils;
 
-$correntistas_e_compras = [
+$correntistas = [
     "Giovanni",
-    12,
+    "João",
     "Maria",
-    25,
     "Luis",
-    "Luísa",
-    "12"
+    "Luisa",
+    "Rafael"
 ];
 
+$saldos = [
+    2500,
+    3000,
+    4400,
+    1000,
+    8700,
+    9000
+];
+
+$combine = array_combine($correntistas, $saldos);
+
 echo '<pre>';
-var_dump($correntistas_e_compras);
-
-ArrayUtils::remover('Giovanni', $correntistas_e_compras);
-
-var_dump($correntistas_e_compras);
+var_dump($combine);
